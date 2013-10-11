@@ -1,4 +1,0 @@
-girth
-=====
-
-The description
