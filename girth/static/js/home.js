@@ -1,21 +1,24 @@
-$(document).ready(function() {
-    console.debug("ready");
-    var ge;
-    console.debug("Before");
-    google.load("earth", "1");
-    console.debug("Loading");
-    google.setOnLoadCallback(init);
-    console.debug("After callback");
-});
+/*$(document).ready(function() {
+    function initialize() {
+        var map_canvas = document.getElementById('map_canvas');
+        var map_options = {
+            center: new google.maps.LatLng(44.5403, -78.5463),
+            zoom: 8,
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+        }
+        var map = new google.maps.Map(map_canvas, map_options)
+    }
 
-function init() {
-  google.earth.createInstance('map3d', init_cb, failure_cb);
-}
+    initialize();
+});*/
 
-function init_cb(instance) {
-  ge = instance;
-  ge.getWindow().setVisibility(true);
+function initialize() {
+    var map_canvas = document.getElementById('map_canvas');
+    var map_options = {
+      center: new google.maps.LatLng(44.5403, -78.5463),
+      zoom: 8,
+      mapTypeId: google.maps.MapTypeId.ROADMAP
+    }
+    var map = new google.maps.Map(map_canvas, map_options)
 }
-
-function failure_cb(error_code) {
-}
+google.maps.event.addDomListener(window, 'load', initialize);

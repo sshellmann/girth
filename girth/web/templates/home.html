@@ -4,7 +4,10 @@
     <script type="text/javascript" src="/static/js/home.js"></script>
 {% endblock %}
 
+{% block css %}
+    <link rel="stylesheet" type="text/css" href="/static/css/home.css" />
+{% endblock %}
+
 {% block content %}
-    <p>Something</p>
-    <div id="map3d" style="height: 400px; width: 600px;"></div> 
+    <div id="map_canvas"></div>
 {% endblock %}
